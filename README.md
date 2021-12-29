@@ -107,6 +107,7 @@
 ## [PHP Functions (1 - 10)](https://www.youtube.com/watch?v=t9FrpTZm1ds&t=1628s&ab_channel=CleverTechie)
 
 #### Default value
+
 <pre>
    $array = array('fox', 'bear', 'deer', 'cat', 'dog', 'elephant', 'wolf');
    $text = "Victory loves preparation";
@@ -186,4 +187,118 @@
    <summary>10) strpos</summary>
 
       echo strpos($text, 'loves');
+</details>
+
+## [PHP Functions (11 - 20)](https://www.youtube.com/watch?v=rQxnnWg4XqQ&ab_channel=CleverTechie)
+
+<details>
+   <summary>11) preg_match</summary>
+
+      function pre_r($array){
+         echo '<pre>';
+            print_r($array);
+         echo '</pre>';
+      }
+      
+      $src = '<img src="https://abc.com">';
+      preg_match("!img src=\"(.*?)\"!", $src, $match);
+      // preg_match("!img src=\"(.*?).(com)\"!", $src, $match);
+      pre_r($match);
+</details>
+
+<details>
+   <summary>12) sprintf</summary>
+
+      // https://www.php.net/manual/en/function.sprintf.php
+      $v=2;
+      $v2=3;
+      $v3='+';
+      $v4='=';
+      $v5='5';
+
+      $format = 'The sum is : %d %s %d %s %f';
+      echo sprintf($format, $v, $v3, $v2, $v4, $v5);
+      echo "<br>";
+      $num = 5;
+      $location = 'tree';
+
+      $format = 'There are %d monkeys in the %s';
+      echo sprintf($format, $num, $location);
+</details>
+
+<details>
+   <summary>13) trim</summary>
+
+      $a = "The best of luck";
+      echo trim($a, 'The');
+</details>
+
+<details>
+   <summary>14) strtolower</summary>
+
+      echo strtolower($a);
+      echo strtoupper($a);
+</details>
+
+<details>
+   <summary>15) file_exists</summary>
+   
+      $file = 'E:\image\image.png';
+      if (file_exists($file)){
+         echo "File $file exits";
+      }else{
+         echo "No file found";
+      }
+</details>
+
+<details>
+   <summary>16) is_string</summary>
+      
+      $string = 'This is string';
+      if (is_string($string)){
+         echo "This is string";
+      }
+
+      $values = array(false, true, null, 'abc', '23', 23, '', ' ', '0', 0);
+      foreach ($values as $value){
+         echo "is_string(";
+         var_export($value);
+         echo ") = ";
+         echo var_dump(is_string($value));
+      }
+</details>
+
+<details>
+   <summary>17) preg_replace</summary>
+
+      $html = '<strong>Victory loves preparation</strong>';
+      echo "$html<br>";
+      echo preg_replace("!<strong>(.*?)</strong>!", "<i>$1</i>", $html);
+</details>
+
+<details>
+   <summary>18) file_get_contents</summary>
+   
+      echo file_get_contents('https://instagram.com'); 
+</details>
+
+<details>
+   <summary>19) array_key_exists</summary>
+
+      $list = array('year'=> 2021, 'laptop'=>'hp', 'model'=>'hp folio 13');
+      $list2 = array('year'=> 2021, 'laptop'=>'hp', 'model-serial'=>'hp folio 13');
+      foreach ($list as $key => $value) {
+         if (array_key_exists($key, $list2)) {
+            echo "The $key exist!<br>";
+         }else{
+            echo "The $key doesn't exist!<br>";
+         }
+      }
+</details>
+
+<details>
+   <summary>20) array_keys</summary>
+   
+      $list = array('year'=> 2021, 'laptop'=>'hp', 'model'=>'hp folio 13');
+      print_r(array_keys($list));
 </details>
