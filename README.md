@@ -100,3 +100,90 @@
       $avg = avgMarks($marksList);
       echo "Sum : $sum" . "<br>"  ."Avg : $avg";
 </details>
+
+
+### [Top 100 PHP Functions](https://www.exakat.io/en/top-100-php-functions)
+
+## [PHP Functions (1 - 10)](https://www.youtube.com/watch?v=t9FrpTZm1ds&t=1628s&ab_channel=CleverTechie)
+
+#### Default value
+<pre>
+   $array = array('fox', 'bear', 'deer', 'cat', 'dog', 'elephant', 'wolf');
+   $text = "Victory loves preparation";
+   $vowels = array('a', 'e', 'i', 'o', 'u');
+</pre>
+
+<details>
+   <summary>1) count</summary>
+
+      echo "Total = ".count($array);
+      for ($i=0; $i <count($array) ; $i++){
+            $j=$i+1 .") ";
+         echo $j.$array[$i].br;
+      }
+</details>
+
+<details>
+   <summary>2) substr</summary>
+
+      echo substr($text, 0, 7);
+</details>
+
+<details>
+   <summary>3) is_array</summary>
+
+      if (is_array($array)){
+         echo "Array exit";
+      }
+</details>
+
+<details>
+   <summary>4) in_array</summary>
+
+      if (in_array('fox', $array, true)){
+         echo "In the array exit";
+      }
+</details>
+
+<details>
+   <summary>5) explode</summary>
+
+      $text2 = "fox, bear, deer, cat, dog, elephant, wolf";
+      $columns2 = "fox|bear|deer|cat|dog|elephant|wolf";
+      print_r(explode("," ,$text2));
+      print_r(explode("|" ,$columns2,));
+      print_r(explode("|" ,$columns2, 2));
+</details>
+
+<details>
+   <summary>6) str_replace</summary>
+
+      echo str_replace($vowels, '-', $text);
+</details>
+
+<details>
+   <summary>7) implode</summary>
+
+      echo implode("," ,$vowels);
+</details>
+
+<details>
+   <summary>8) strlen</summary>
+
+      echo strlen($text);
+</details>
+
+<details>
+   <summary>9, 9.1) array_merge/array_combine</summary>
+
+      $vowels2 = array('a', 'e', 'i', 'o', 'u');
+      $array2 = array('fox', 'bear', 'deer', 'cat', 'dog');
+      print_r(array_merge($vowels2, $array2));
+      print_r(array_combine($vowels2, $array2));
+</details>
+
+<details>
+   <summary>10) strpos</summary>
+
+      echo strpos($text, 'loves');
+</details>
